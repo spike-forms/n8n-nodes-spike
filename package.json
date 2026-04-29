@@ -1,0 +1,46 @@
+{
+  "name": "n8n-nodes-spike",
+  "version": "0.7.1",
+  "description": "n8n community node for Spike Forms — trigger workflows on new submissions, create forms, and submit data",
+  "license": "MIT",
+  "homepage": "https://spike.ac",
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "author": {
+    "name": "Spike",
+    "email": "saeedmshdi@gmail.com",
+    "url": "https://spike.ac"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spike-forms/n8n-nodes-spike.git"
+  },
+  "scripts": {
+    "build": "n8n-node build",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/SpikeApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Spike/Spike.node.js",
+      "dist/nodes/Spike/SpikeTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "*",
+    "eslint": "9.39.4",
+    "typescript": "5.9.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
